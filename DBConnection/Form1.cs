@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace DBConnection
 {
@@ -20,21 +21,12 @@ namespace DBConnection
         public Form1()
         {
             InitializeComponent();
-            //connection.StateChange += new
-               // StateChangeEventHandler(
-               // connection_StateChange);
+            this.connection.StateChange += new
+                 StateChangeEventHandler(
+                 this.connection_StateChange);
 
         }
-       /* private void connection_StateChange(object sender, StateChangeEventArgs e)
-        {
-            ToolStripMenuItem.Enabled =
-                (e.CurrentState == ConnectionState.Closed);
-            ToolStripMenuItem.Enabled =
-                (e.CurrentState == ConnectionState.Open);
-        }*/
-
-   
-        private void button1_Click(object sender, EventArgs e)
+        private void опцияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -47,11 +39,12 @@ namespace DBConnection
                 else
                     MessageBox.Show("Соединение с базой данных уже установлено");
             }
+
             catch (OleDbException XcpSQL)
             {
                 foreach (OleDbError se in XcpSQL.Errors)
                 {
-                    MessageBox.Show(se.Message, se.SQLState+
+                    MessageBox.Show(se.Message, se.SQLState +
                     "SQL Error code " + se.NativeError,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -72,5 +65,22 @@ namespace DBConnection
                 MessageBox.Show("Соединение с базой данных уже закрыто");
 
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+        private void connection_StateChange(object sender, StateChangeEventArgs e)
+        {
+            включитьбазуToolStripMenuItem.Enabled =
+                (e.CurrentState == ConnectionState.Open);
+            выключитьбазуToolStripMenuItem.Enabled =
+                (e.CurrentState == ConnectionState.Closed);
+        }
+
+
+    
+        
+        }
     }
-}
+
+
+
