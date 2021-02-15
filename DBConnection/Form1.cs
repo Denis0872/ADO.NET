@@ -16,7 +16,7 @@ namespace DBConnection
 {
     public partial class Form1 : Form
     {
-        string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;User ID=denis;Initial Catalog=Praktikadb;Data Source=DENIS-COMP\SQLEXPRESS";
+        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;User ID=denis;Initial Catalog=Praktikadb;Data Source=DENIS-COMP\SQLEXPRESS";
         OleDbConnection connection = new OleDbConnection();
         public Form1()
         {
@@ -26,6 +26,16 @@ namespace DBConnection
                  this.connection_StateChange);
 
         }
+        static string GetConnectionStringByName(string name)
+        {
+            string returnValue = null;
+            ConnectionStringSettings settings =
+                ConfigurationManager.ConnectionStrings[name];
+            if (settings != null)
+                returnValue = settings.ConnectionString;
+            return returnValue;
+        }
+        string testConnect = GetConnectionStringByName("PraktikaDB");
         private void опцияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -76,10 +86,22 @@ namespace DBConnection
                 (e.CurrentState == ConnectionState.Closed);
         }
 
+        private void списокПодключенийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConnectionStringSettingsCollection settings =
+            ConfigurationManager.ConnectionStrings;
+            if (settings != null)
+            {
+                foreach (ConnectionStringSettings cs in settings)
+                {
+                    MessageBox.Show("name = " + cs.Name);
+                    MessageBox.Show("providerName = " + cs.ProviderName);
+                    MessageBox.Show("connectionString = " + cs.ConnectionString);
+                }
+            }
 
-    
-        
         }
+    }
     }
 
 

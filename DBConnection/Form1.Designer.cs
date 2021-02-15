@@ -36,6 +36,7 @@ namespace DBConnection
             this.опцияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.включитьбазуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выключитьбазуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.списокПодключенийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@ namespace DBConnection
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.опцияToolStripMenuItem});
+            this.опцияToolStripMenuItem,
+            this.списокПодключенийToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -74,14 +76,19 @@ namespace DBConnection
             this.включитьбазуToolStripMenuItem.Name = "включитьбазуToolStripMenuItem";
             this.включитьбазуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.включитьбазуToolStripMenuItem.Text = "Включить базу";
-           
             // 
             // выключитьбазуToolStripMenuItem
             // 
             this.выключитьбазуToolStripMenuItem.Name = "выключитьбазуToolStripMenuItem";
             this.выключитьбазуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выключитьбазуToolStripMenuItem.Text = "Выключить базу";
-            
+            // 
+            // списокПодключенийToolStripMenuItem
+            // 
+            this.списокПодключенийToolStripMenuItem.Name = "списокПодключенийToolStripMenuItem";
+            this.списокПодключенийToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
+            this.списокПодключенийToolStripMenuItem.Text = "Список подключений";
+            this.списокПодключенийToolStripMenuItem.Click += new System.EventHandler(this.списокПодключенийToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -112,6 +119,7 @@ namespace DBConnection
         private System.Windows.Forms.ToolStripMenuItem опцияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem включитьбазуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выключитьбазуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem списокПодключенийToolStripMenuItem;
     }
 }
 
