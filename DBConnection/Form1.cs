@@ -21,9 +21,9 @@ namespace DBConnection
         public Form1()
         {
             InitializeComponent();
-            this.connection.StateChange += new
-                 StateChangeEventHandler(
-                 this.connection_StateChange);
+            connection.StateChange += new
+                StateChangeEventHandler(
+                connection_StateChange);
 
         }
         static string GetConnectionStringByName(string name)
@@ -38,9 +38,70 @@ namespace DBConnection
         string testConnect = GetConnectionStringByName("PraktikaDB");
         private void опцияToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (connection.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Сначала подключитесь к базе");
+                return;
+            }
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+          
+            
+            command.CommandText = "SELECT COUNT(*) FROM OurTable";
+            int number = (int)command.ExecuteScalar();
+            label1.Text = number.ToString();
+            
+            //connection.Close();
+           // MessageBox.Show("Соединение с базой данных закрыто");
+
+        }
+        private void connection_StateChange(object sender, StateChangeEventArgs e)
+        {
+            включеноToolStripMenuItem.Enabled =
+                (e.CurrentState == ConnectionState.Open);
+            выключеноToolStripMenuItem.Enabled =
+                (e.CurrentState == ConnectionState.Closed);
+        }
+
+        private void списокПодключенийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConnectionStringSettingsCollection settings =
+            ConfigurationManager.ConnectionStrings;
+            if (settings != null)
+            {
+                foreach (ConnectionStringSettings cs in settings)
+                {
+                    MessageBox.Show("name = " + cs.Name);
+                    MessageBox.Show("providerName = " + cs.ProviderName);
+                    MessageBox.Show("connectionString = " + cs.ConnectionString);
+                    MessageBox.Show("configuration = " + cs.CurrentConfiguration);
+                }
+            }
+
+        }
+
+        private void выключитьбазуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+                MessageBox.Show("Соединение с базой данных   закрыто");
+            }
+            else
+                MessageBox.Show("Соединение с базой данных не открыто");
+               //Application.Exit();
+        }
+
+        private void включитьбазуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             try
             {
-                if (connection.State != ConnectionState.Open)
+                if (connection.State == ConnectionState.Closed)
                 {
                     connection.ConnectionString = testConnect;
                     connection.Open();
@@ -66,43 +127,41 @@ namespace DBConnection
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void статусБазыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try 
+            { 
             if (connection.State == ConnectionState.Open)
             {
-                connection.Close();
-                MessageBox.Show("Соединение с базой данных закрыто");
+
+                MessageBox.Show("Соединение с базой установлено");
             }
             else
-                MessageBox.Show("Соединение с базой данных уже закрыто");
+                MessageBox.Show("Соединение с базой данных отсутствует");
 
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-        private void connection_StateChange(object sender, StateChangeEventArgs e)
-        {
-            включитьбазуToolStripMenuItem.Enabled =
-                (e.CurrentState == ConnectionState.Open);
-            выключитьбазуToolStripMenuItem.Enabled =
-                (e.CurrentState == ConnectionState.Closed);
-        }
 
-        private void списокПодключенийToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ConnectionStringSettingsCollection settings =
-            ConfigurationManager.ConnectionStrings;
-            if (settings != null)
-            {
-                foreach (ConnectionStringSettings cs in settings)
+            OleDbCommand command = connection.CreateCommand();
+            command.CommandText = "SELECT nCanonId FROM OurTable";
+            OleDbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
                 {
-                    MessageBox.Show("name = " + cs.Name);
-                    MessageBox.Show("providerName = " + cs.ProviderName);
-                    MessageBox.Show("connectionString = " + cs.ConnectionString);
+                listView1.Items.Add(reader["nCanonId"].ToString());
                 }
             }
-
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
-    }
+}
 
 
 
