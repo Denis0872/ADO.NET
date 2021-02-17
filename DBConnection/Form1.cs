@@ -160,6 +160,48 @@ namespace DBConnection
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Open)
+            {
+            OleDbTransaction OleTran = connection.BeginTransaction();
+            OleDbCommand command = connection.CreateCommand();
+            command.Transaction = OleTran;
+            try
+            {
+                command.CommandText =
+              "INSERT INTO  OurTable (nCanonId)  VALUES('6666666')";
+                command.ExecuteNonQuery();
+
+               command.CommandText =
+               "INSERT INTO OurTable (nCanonId)  VALUES('5555555')";
+               command.ExecuteNonQuery();
+                OleTran.Commit();
+                MessageBox.Show("Записи внесены в базу");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                try
+                {
+                    OleTran.Rollback();
+                }
+                catch (Exception exRollback)
+                {
+                    MessageBox.Show(exRollback.Message);
+                }
+               
+            }
+            }
+            else { 
+                MessageBox.Show("Соединение с базой данных не открыто");
+                }
+            
+            
+
+
+        }
     }
 }
 
