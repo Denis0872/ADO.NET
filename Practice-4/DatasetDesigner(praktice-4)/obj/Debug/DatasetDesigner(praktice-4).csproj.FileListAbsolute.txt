@@ -1,0 +1,10 @@
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\bin\Debug\DatasetDesigner(praktice-4).exe.config
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\bin\Debug\DatasetDesigner(praktice-4).exe
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\bin\Debug\DatasetDesigner(praktice-4).pdb
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\obj\Debug\DatasetDesigner(praktice-4).csprojAssemblyReference.cache
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\obj\Debug\DatasetDesigner_praktice_4_.Properties.Resources.resources
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\obj\Debug\DatasetDesigner(praktice-4).csproj.GenerateResource.cache
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\obj\Debug\DatasetDesigner(praktice-4).csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\obj\Debug\DatasetDesigner(praktice-4).exe
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\obj\Debug\DatasetDesigner(praktice-4).pdb
+C:\Users\Пользователь\source\repos\ADO.NET\Practice-4\DatasetDesigner(praktice-4)\obj\Debug\DatasetDesigner_praktice_4_.Form1.resources
