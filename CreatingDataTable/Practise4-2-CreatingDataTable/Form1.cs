@@ -48,6 +48,7 @@ namespace Practise4_2_CreatingDataTable
         private void AddRowButton_Click(object sender, EventArgs e)
         {
             try { 
+
             DataRow CustRow = CustomersTable.NewRow();
             Object[] CustRecord =  {"ALFKI", "Alfreds Futterkiste", "Maria Anders",
                 "Sales Representative", "Obere Str. 57", "Berlin",
