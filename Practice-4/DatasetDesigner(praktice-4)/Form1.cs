@@ -21,8 +21,7 @@ namespace DatasetDesigner_praktice_4_
         private void GetCustomersButton_Click(object sender, EventArgs e)
         {
             ApressDataSet1 NorthwindDataset1 = new ApressDataSet1();
-            ApressDataSet1TableAdapters.CustomersTableAdapter
-            CustomersTableAdapter1 = new ApressDataSet1TableAdapters.CustomersTableAdapter();
+            ApressDataSet1TableAdapters.CustomersTableAdapter CustomersTableAdapter1 = new ApressDataSet1TableAdapters.CustomersTableAdapter();
             CustomersTableAdapter1.Fill(NorthwindDataset1.Customers);
             foreach (ApressDataSet1.CustomersRow NWCustomer in
                              NorthwindDataset1.Customers.Rows)

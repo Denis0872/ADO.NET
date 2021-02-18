@@ -1,0 +1,10 @@
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\bin\Debug\Practise4-2-CreatingDataTable.exe.config
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\bin\Debug\Practise4-2-CreatingDataTable.exe
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\bin\Debug\Practise4-2-CreatingDataTable.pdb
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\obj\Debug\Practise4-2-CreatingDataTable.csprojAssemblyReference.cache
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\obj\Debug\Practise4_2_CreatingDataTable.Form1.resources
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\obj\Debug\Practise4_2_CreatingDataTable.Properties.Resources.resources
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\obj\Debug\Practise4-2-CreatingDataTable.csproj.GenerateResource.cache
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\obj\Debug\Practise4-2-CreatingDataTable.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\obj\Debug\Practise4-2-CreatingDataTable.exe
+C:\Users\Пользователь\source\repos\ADO.NET\CreatingDataTable\Practise4-2-CreatingDataTable\obj\Debug\Practise4-2-CreatingDataTable.pdb
