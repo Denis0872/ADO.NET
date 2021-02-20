@@ -1,0 +1,10 @@
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\bin\Debug\Practice4-Task3-DataAdapterWizard.exe.config
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\bin\Debug\Practice4-Task3-DataAdapterWizard.exe
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\bin\Debug\Practice4-Task3-DataAdapterWizard.pdb
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\obj\Debug\Practice4-Task3-DataAdapterWizard.csprojAssemblyReference.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\obj\Debug\Practice4_Task3_DataAdapterWizard.Form1.resources
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\obj\Debug\Practice4_Task3_DataAdapterWizard.Properties.Resources.resources
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\obj\Debug\Practice4-Task3-DataAdapterWizard.csproj.GenerateResource.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\obj\Debug\Practice4-Task3-DataAdapterWizard.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\obj\Debug\Practice4-Task3-DataAdapterWizard.exe
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterWizard\Practice4-Task3-DataAdapterWizard\obj\Debug\Practice4-Task3-DataAdapterWizard.pdb

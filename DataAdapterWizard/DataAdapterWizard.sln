@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice4-Task3-DataAdapterWizard", "Practice4-Task3-DataAdapterWizard\Practice4-Task3-DataAdapterWizard.csproj", "{12634300-4485-45AA-B5C8-040E77E845D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12634300-4485-45AA-B5C8-040E77E845D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12634300-4485-45AA-B5C8-040E77E845D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12634300-4485-45AA-B5C8-040E77E845D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12634300-4485-45AA-B5C8-040E77E845D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EB13FEC-3DCA-4A3A-B185-44FCAB4BA8E0}
+	EndGlobalSection
+EndGlobal

@@ -15,6 +15,7 @@ namespace Practise4_2_CreatingDataTable
         public Form1()
         {
             InitializeComponent();
+           
 
         }
         private DataTable CustomersTable = new DataTable("Customers");
@@ -41,7 +42,7 @@ namespace Practise4_2_CreatingDataTable
             CustomersTable.Columns["CustomerID"].AllowDBNull = false;
             CustomersTable.Columns["CompanyName"].AllowDBNull = false;
 
-
+           
 
         }
 
@@ -52,14 +53,16 @@ namespace Practise4_2_CreatingDataTable
             DataRow CustRow = CustomersTable.NewRow();
             Object[] CustRecord =  {"ALFKI", "Alfreds Futterkiste", "Maria Anders",
                 "Sales Representative", "Obere Str. 57", "Berlin",
-                  null, "12209", "Germany", "030-0074321","030-0076545"};
+                  CustomersTable.TableName, "12209", "Germany", "030-0074321","030-0076545"};
             CustRow.ItemArray = CustRecord;
             CustomersTable.Rows.Add(CustRow);
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Ошибка " + ex.Message);
             }
+          
         }
     }
 }
