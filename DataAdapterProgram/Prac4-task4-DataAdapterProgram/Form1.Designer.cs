@@ -1,5 +1,5 @@
 ﻿
-namespace Practice4_Task3_DataAdapterWizard
+namespace Prac4_task4_DataAdapterProgram
 {
     partial class Form1
     {
@@ -30,30 +30,48 @@ namespace Practice4_Task3_DataAdapterWizard
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
+            this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
-            this.northwindDataSet1 = new Practice4_Task3_DataAdapterWizard.NorthwindDataSet();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.UpdateButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet1)).BeginInit();
+            this.dataSet11 = new Prac4_task4_DataAdapterProgram.DataSet1();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
             // 
-            // sqlSelectCommand1
+            // dataGridView1
             // 
-            this.sqlSelectCommand1.CommandText = "SELECT        CustomerID, CompanyName, ContactName, ContactTitle, Address, City, " +
-    "Region, PostalCode, Country, Phone, Fax\r\nFROM            Customers";
-            this.sqlSelectCommand1.Connection = this.sqlConnection1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(784, 211);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Location = new System.Drawing.Point(12, 230);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(234, 23);
+            this.UpdateButton.TabIndex = 1;
+            this.UpdateButton.Text = "Save Change";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // sqlConnection1
             // 
             this.sqlConnection1.ConnectionString = "Data Source=DENIS-COMP\\SQLEXPRESS;Initial Catalog=NORTHWND;Integrated Security=Tr" +
     "ue";
             this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
+            // 
+            // sqlSelectCommand1
+            // 
+            this.sqlSelectCommand1.CommandText = "SELECT        CustomerID, CompanyName, ContactName, ContactTitle, Address, City, " +
+    "Region, PostalCode, Country, Phone, Fax\r\nFROM            Customers";
+            this.sqlSelectCommand1.Connection = this.sqlConnection1;
             // 
             // sqlInsertCommand1
             // 
@@ -154,32 +172,11 @@ namespace Practice4_Task3_DataAdapterWizard
                         new System.Data.Common.DataColumnMapping("Phone", "Phone"),
                         new System.Data.Common.DataColumnMapping("Fax", "Fax")})});
             this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
-            this.sqlDataAdapter1.RowUpdated += new System.Data.SqlClient.SqlRowUpdatedEventHandler(this.sqlDataAdapter1_RowUpdated);
-            this.sqlDataAdapter1.RowUpdating += new System.Data.SqlClient.SqlRowUpdatingEventHandler(this.sqlDataAdapter1_RowUpdating);
-            this.sqlDataAdapter1.FillError += new System.Data.FillErrorEventHandler(this.sqlDataAdapter1_FillError);
             // 
-            // northwindDataSet1
+            // dataSet11
             // 
-            this.northwindDataSet1.DataSetName = "NorthwindDataSet";
-            this.northwindDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // UpdateButton
-            // 
-            this.UpdateButton.Location = new System.Drawing.Point(12, 191);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(161, 23);
-            this.UpdateButton.TabIndex = 1;
-            this.UpdateButton.Text = "Save Change";
-            this.UpdateButton.UseVisualStyleBackColor = true;
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            this.dataSet11.DataSetName = "NorthwindDataset";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Form1
             // 
@@ -191,23 +188,23 @@ namespace Practice4_Task3_DataAdapterWizard
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Data.SqlClient.SqlCommand sqlSelectCommand1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button UpdateButton;
         private System.Data.SqlClient.SqlConnection sqlConnection1;
+        private System.Data.SqlClient.SqlCommand sqlSelectCommand1;
         private System.Data.SqlClient.SqlCommand sqlInsertCommand1;
         private System.Data.SqlClient.SqlCommand sqlUpdateCommand1;
         private System.Data.SqlClient.SqlCommand sqlDeleteCommand1;
         private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
-        private NorthwindDataSet northwindDataSet1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button UpdateButton;
+        private DataSet1 dataSet11;
     }
 }
 

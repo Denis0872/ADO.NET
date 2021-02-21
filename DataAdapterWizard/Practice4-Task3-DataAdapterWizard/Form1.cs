@@ -20,12 +20,11 @@ namespace Practice4_Task3_DataAdapterWizard
 
         private void sqlDataAdapter1_RowUpdated(object sender, System.Data.SqlClient.SqlRowUpdatedEventArgs e)
         {
-            // sqlDataAdapter1.Fill(northwindDataSet1.Customers);
+             sqlDataAdapter1.Fill(northwindDataSet1.Customers);
             NorthwindDataSet.CustomersRow CustRow = (NorthwindDataSet.CustomersRow)e.Row;
             MessageBox.Show(CustRow.CustomerID.ToString() + " has been updated");
             northwindDataSet1.Customers.Clear();
-            sqlDataAdapter1.Fill(northwindDataSet1.Customers);
-
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,6 +45,7 @@ namespace Practice4_Task3_DataAdapterWizard
             if (response == DialogResult.No)
             {
                 e.Status = UpdateStatus.SkipCurrentRow;
+                //northwindDataSet1.Customers.Clear();
             }
 
         }

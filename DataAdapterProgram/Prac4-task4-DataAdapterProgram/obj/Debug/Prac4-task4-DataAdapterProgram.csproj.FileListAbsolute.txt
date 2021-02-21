@@ -1,0 +1,10 @@
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\bin\Debug\Prac4-task4-DataAdapterProgram.exe.config
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\bin\Debug\Prac4-task4-DataAdapterProgram.exe
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\bin\Debug\Prac4-task4-DataAdapterProgram.pdb
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\obj\Debug\Prac4-task4-DataAdapterProgram.csprojAssemblyReference.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\obj\Debug\Prac4_task4_DataAdapterProgram.Form1.resources
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\obj\Debug\Prac4_task4_DataAdapterProgram.Properties.Resources.resources
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\obj\Debug\Prac4-task4-DataAdapterProgram.csproj.GenerateResource.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\obj\Debug\Prac4-task4-DataAdapterProgram.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\obj\Debug\Prac4-task4-DataAdapterProgram.exe
+C:\Users\Пользователь\source\repos\ADO.NET\DataAdapterProgram\Prac4-task4-DataAdapterProgram\obj\Debug\Prac4-task4-DataAdapterProgram.pdb
