@@ -1,0 +1,10 @@
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\bin\Debug\Prac4-Task5-WorkingDataTable.exe.config
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\bin\Debug\Prac4-Task5-WorkingDataTable.exe
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\bin\Debug\Prac4-Task5-WorkingDataTable.pdb
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\obj\Debug\Prac4-Task5-WorkingDataTable.csprojAssemblyReference.cache
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\obj\Debug\Prac4_Task5_WorkingDataTable.Form1.resources
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\obj\Debug\Prac4_Task5_WorkingDataTable.Properties.Resources.resources
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\obj\Debug\Prac4-Task5-WorkingDataTable.csproj.GenerateResource.cache
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\obj\Debug\Prac4-Task5-WorkingDataTable.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\obj\Debug\Prac4-Task5-WorkingDataTable.exe
+C:\Users\Пользователь\source\repos\ADO.NET\WorkingDataTable\Prac4-Task5-WorkingDataTable\obj\Debug\Prac4-Task5-WorkingDataTable.pdb
