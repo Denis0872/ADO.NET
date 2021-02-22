@@ -1,0 +1,10 @@
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\bin\Debug\Prac4-Task-6-DataViewExample.exe.config
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\bin\Debug\Prac4-Task-6-DataViewExample.exe
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\bin\Debug\Prac4-Task-6-DataViewExample.pdb
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\obj\Debug\Prac4-Task-6-DataViewExample.csprojAssemblyReference.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\obj\Debug\Prac4_Task_6_DataViewExample.Form1.resources
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\obj\Debug\Prac4_Task_6_DataViewExample.Properties.Resources.resources
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\obj\Debug\Prac4-Task-6-DataViewExample.csproj.GenerateResource.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\obj\Debug\Prac4-Task-6-DataViewExample.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\obj\Debug\Prac4-Task-6-DataViewExample.exe
+C:\Users\Пользователь\source\repos\ADO.NET\DataViewExample\Prac4-Task-6-DataViewExample\obj\Debug\Prac4-Task-6-DataViewExample.pdb
