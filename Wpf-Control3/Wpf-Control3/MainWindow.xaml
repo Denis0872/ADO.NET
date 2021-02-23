@@ -1,0 +1,63 @@
+﻿<Window x:Class="Wpf_Control3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Control3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="520" Width="800" >
+    <Grid x:Name="MainContainer" Background="#A68E00" HorizontalAlignment="Left" MinHeight="490" MaxHeight="380" Margin="0" VerticalAlignment="Top" MinWidth="790" MaxWidth="397" Width="789" Height="471">
+        <Grid.RowDefinitions >
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.ColumnSpan="3" Grid.Column="2" Height="63" Margin="10,1,0,0" TextWrapping="Wrap" Text="БАЗА ДАННЫХ PraktikaDB" Width="319" FontWeight="Bold" FontSize="22" Background="#FFCF8383" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button x:Name="buttonSwitchOn" HorizontalAlignment="Center" Margin="0,0,1,0" Grid.Row="1" VerticalAlignment="Center" Width="206" Grid.ColumnSpan="2" Height="55" FontSize="17" >
+            <Button Content="Подключение" Width="201" Height="45" Click="Button_Click"/>
+        </Button>
+        <Button HorizontalAlignment="Center" Margin="8,54,1,0" VerticalAlignment="Center" Width="217" Height="55" Grid.ColumnSpan="2" FontSize="17" Grid.Column="2" Grid.RowSpan="2">
+            <Button Content="Количество строк" Width="209" Height="45" Click="Button_Click_1"/>
+        </Button>
+        <DataGrid x:Name="OurGrid" Grid.ColumnSpan="3" Grid.Column="4" HorizontalAlignment="Left" Height="338" Margin="5,6,0,0" Grid.Row="1" Grid.RowSpan="5" VerticalAlignment="Top" 
+                  Width="328" AutoGenerateColumns="False" >
+
+        </DataGrid>
+        <Button x:Name="filluu" HorizontalAlignment="Center" Margin="6,8,14,7" Grid.Row="3" VerticalAlignment="Center" Width="206" Height="55" Grid.ColumnSpan="2" FontSize="17" Grid.Column="2" >
+            <Button Content="Заполнить базой" Width="198" Height="38" Click="Button_Click_3"/>
+        </Button>
+        <Button HorizontalAlignment="Center" Margin="13,8,7,7" Grid.Row="3" VerticalAlignment="Center" Width="206" Height="55" Grid.ColumnSpan="2" FontSize="17">
+            <Button Content="Получить колонку" Width="200" Height="41" Click="Button_Click_2"/>
+        </Button>
+        <Button HorizontalAlignment="Center" Margin="14,4,6,11" Grid.Row="4" VerticalAlignment="Center" Width="206" Height="55" Grid.ColumnSpan="2" FontSize="17">
+            <Button x:Name="addstring" Content="Добавить строку" Width="203" Height="37" Click="addstring_Click"/>
+        </Button>
+        <Button HorizontalAlignment="Center" Margin="12,8,8,8" Grid.Row="4" VerticalAlignment="Center" Width="206" Height="54" Grid.ColumnSpan="2" FontSize="17" Grid.Column="2">
+            <Button x:Name="deletestring" Content="Удалить строку" Width="202" Height="35" Click="deletestring_Click"/>
+        </Button>
+        <Button HorizontalAlignment="Center" Margin="10,8" Grid.Row="5" VerticalAlignment="Center" Width="206" Height="54" Grid.ColumnSpan="2" FontSize="17">
+            <Button x:Name="RollBack" Content="Откатить назад" Width="203" Height="36" Click="RollBack_Click"/>
+        </Button>
+        <Label x:Name="label1" Content="количество" Grid.Column="2" HorizontalAlignment="Left" Margin="21,1,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="144"/>
+        <ListBox x:Name="ListBox1" Grid.ColumnSpan="3" Grid.Column="4" HorizontalAlignment="Left" Height="259" Margin="7,0,0,0" Grid.Row="1" Grid.RowSpan="5" VerticalAlignment="Bottom" Width="321"/>
+        <DataGrid x:Name="DataGrid1" Grid.ColumnSpan="7" HorizontalAlignment="Left" Height="152" Margin="5,7,0,0" Grid.Row="6" Grid.RowSpan="3" VerticalAlignment="Top" Width="781"/>
+        <Button x:Name="SwitchOff" Content="Закрыть соединение" Grid.Column="2" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="5" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2" Height="42" FontSize="18" Click="SwitchOff_Click"/>
+        <Button x:Name="save" Grid.ColumnSpan="2" Content="Сохранить" HorizontalAlignment="Left" Margin="12,8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="202" Height="44" FontSize="18" Click="save_Click"/>
+
+    </Grid>
+</Window>
