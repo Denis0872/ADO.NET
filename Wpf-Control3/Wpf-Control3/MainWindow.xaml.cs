@@ -86,7 +86,6 @@ namespace Wpf_Control3
         {
             string cmd = "SELECT * FROM OurTable";
             OleDbCommand command1 = new OleDbCommand(cmd, connection);
-            //OleDbDataReader reader = command1.ExecuteReader();
             OleDbDataAdapter dataAdp = new OleDbDataAdapter(command1);
             DataTable dt = new DataTable("OurTable");
             dataAdp.Fill(dt);
