@@ -13,3 +13,8 @@ C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3
 C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3\obj\Debug\Wpf-Control3.csproj.CoreCompileInputs.cache
 C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3\obj\Debug\Wpf-Control3.exe
 C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3\obj\Debug\Wpf-Control3.pdb
+C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3\bin\Debug\EntityFramework.dll
+C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3\bin\Debug\EntityFramework.xml
+C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Пользователь\source\repos\ADO.NET\Wpf-Control3\Wpf-Control3\obj\Debug\Wpf-Control3.csproj.CopyComplete

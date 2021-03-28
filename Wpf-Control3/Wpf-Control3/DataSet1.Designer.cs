@@ -10,8 +10,11 @@
 
 #pragma warning disable 1591
 
+using System;
+using System.Data;
+
 namespace Wpf_Control3 {
-    
+
     
     /// <summary>
     ///Represents a strongly typed in-memory cache of data.
@@ -30,6 +33,7 @@ namespace Wpf_Control3 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+       
         public DataSet1() {
             this.BeginInit();
             this.InitClass();
@@ -602,6 +606,8 @@ namespace Wpf_Control3 {
                 xs.Add(dsSchema);
                 return type;
             }
+
+          
         }
         
         /// <summary>
@@ -993,12 +999,57 @@ namespace Wpf_Control3.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT \"PropId\", \"nCanonId\", \"dtReportDate\", \"nTerOtdelenie\", \"nTerPodrazdel\", \"v" +
                 "Procent\" FROM \"dbo\".\"OurTable\"";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"DELETE FROM [PraktikaDB].[dbo].[OurTable] WHERE (([PropId] = ?) AND ((? = 1 AND [nCanonId] IS NULL) OR ([nCanonId] = ?)) AND ((? = 1 AND [dtReportDate] IS NULL) OR ([dtReportDate] = ?)) AND ((? = 1 AND [nTerOtdelenie] IS NULL) OR ([nTerOtdelenie] = ?)) AND ((? = 1 AND [nTerPodrazdel] IS NULL) OR ([nTerPodrazdel] = ?)) AND ((? = 1 AND [vProcent] IS NULL) OR ([vProcent] = ?)))";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PropId", global::System.Data.OleDb.OleDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PropId", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nCanonId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nCanonId", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nCanonId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nCanonId", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dtReportDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtReportDate", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dtReportDate", global::System.Data.OleDb.OleDbType.DBDate, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtReportDate", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nTerOtdelenie", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerOtdelenie", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nTerOtdelenie", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerOtdelenie", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nTerPodrazdel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerPodrazdel", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nTerPodrazdel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerPodrazdel", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_vProcent", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vProcent", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_vProcent", global::System.Data.OleDb.OleDbType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(4)), "vProcent", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO [PraktikaDB].[dbo].[OurTable] ([nCanonId], [dtReportDate], [nTerOtdel" +
+                "enie], [nTerPodrazdel], [vProcent]) VALUES (?, ?, ?, ?, ?)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nCanonId", global::System.Data.OleDb.OleDbType.Integer, 4, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nCanonId", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dtReportDate", global::System.Data.OleDb.OleDbType.DBDate, 3, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtReportDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nTerOtdelenie", global::System.Data.OleDb.OleDbType.Integer, 4, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerOtdelenie", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nTerPodrazdel", global::System.Data.OleDb.OleDbType.Integer, 4, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerPodrazdel", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vProcent", global::System.Data.OleDb.OleDbType.Numeric, 5, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(4)), "vProcent", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"UPDATE [PraktikaDB].[dbo].[OurTable] SET [nCanonId] = ?, [dtReportDate] = ?, [nTerOtdelenie] = ?, [nTerPodrazdel] = ?, [vProcent] = ? WHERE (([PropId] = ?) AND ((? = 1 AND [nCanonId] IS NULL) OR ([nCanonId] = ?)) AND ((? = 1 AND [dtReportDate] IS NULL) OR ([dtReportDate] = ?)) AND ((? = 1 AND [nTerOtdelenie] IS NULL) OR ([nTerOtdelenie] = ?)) AND ((? = 1 AND [nTerPodrazdel] IS NULL) OR ([nTerPodrazdel] = ?)) AND ((? = 1 AND [vProcent] IS NULL) OR ([vProcent] = ?)))";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nCanonId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nCanonId", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dtReportDate", global::System.Data.OleDb.OleDbType.DBDate, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtReportDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nTerOtdelenie", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerOtdelenie", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nTerPodrazdel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerPodrazdel", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("vProcent", global::System.Data.OleDb.OleDbType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(4)), "vProcent", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PropId", global::System.Data.OleDb.OleDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PropId", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nCanonId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nCanonId", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nCanonId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nCanonId", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dtReportDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtReportDate", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dtReportDate", global::System.Data.OleDb.OleDbType.DBDate, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dtReportDate", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nTerOtdelenie", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerOtdelenie", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nTerOtdelenie", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerOtdelenie", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nTerPodrazdel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerPodrazdel", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nTerPodrazdel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nTerPodrazdel", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_vProcent", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "vProcent", global::System.Data.DataRowVersion.Original, true, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_vProcent", global::System.Data.OleDb.OleDbType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(6)), ((byte)(4)), "vProcent", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1257,6 +1308,273 @@ namespace Wpf_Control3.DataSet1TableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(long Original_PropId, global::System.Nullable<int> IsNull_nCanonId, global::System.Nullable<int> Original_nCanonId, global::System.Nullable<int> IsNull_dtReportDate, global::System.Nullable<global::System.DateTime> Original_dtReportDate, global::System.Nullable<int> IsNull_nTerOtdelenie, global::System.Nullable<int> Original_nTerOtdelenie, global::System.Nullable<int> IsNull_nTerPodrazdel, global::System.Nullable<int> Original_nTerPodrazdel, global::System.Nullable<int> IsNull_vProcent, global::System.Nullable<decimal> Original_vProcent) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((long)(Original_PropId));
+            if ((IsNull_nCanonId.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(IsNull_nCanonId.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Original_nCanonId.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(Original_nCanonId.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_dtReportDate.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(IsNull_dtReportDate.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Original_dtReportDate.HasValue == true)) {
+                command.Parameters[4].Value = ((System.DateTime)(Original_dtReportDate.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_nTerOtdelenie.HasValue == true)) {
+                command.Parameters[5].Value = ((int)(IsNull_nTerOtdelenie.Value));
+            }
+            else {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_nTerOtdelenie.HasValue == true)) {
+                command.Parameters[6].Value = ((int)(Original_nTerOtdelenie.Value));
+            }
+            else {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_nTerPodrazdel.HasValue == true)) {
+                command.Parameters[7].Value = ((int)(IsNull_nTerPodrazdel.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_nTerPodrazdel.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(Original_nTerPodrazdel.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_vProcent.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(IsNull_vProcent.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_vProcent.HasValue == true)) {
+                command.Parameters[10].Value = ((decimal)(Original_vProcent.Value));
+            }
+            else {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(global::System.Nullable<int> nCanonId, string dtReportDate, global::System.Nullable<int> nTerOtdelenie, global::System.Nullable<int> nTerPodrazdel, global::System.Nullable<decimal> vProcent) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
+            if ((nCanonId.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(nCanonId.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((dtReportDate == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(dtReportDate));
+            }
+            if ((nTerOtdelenie.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(nTerOtdelenie.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((nTerPodrazdel.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(nTerPodrazdel.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((vProcent.HasValue == true)) {
+                command.Parameters[4].Value = ((decimal)(vProcent.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuery(
+                    global::System.Nullable<int> nCanonId, 
+                    global::System.Nullable<global::System.DateTime> dtReportDate, 
+                    global::System.Nullable<int> nTerOtdelenie, 
+                    global::System.Nullable<int> nTerPodrazdel, 
+                    global::System.Nullable<decimal> vProcent, 
+                    long Original_PropId, 
+                    global::System.Nullable<int> IsNull_nCanonId, 
+                    global::System.Nullable<int> Original_nCanonId, 
+                    global::System.Nullable<int> IsNull_dtReportDate, 
+                    global::System.Nullable<global::System.DateTime> Original_dtReportDate, 
+                    global::System.Nullable<int> IsNull_nTerOtdelenie, 
+                    global::System.Nullable<int> Original_nTerOtdelenie, 
+                    global::System.Nullable<int> IsNull_nTerPodrazdel, 
+                    global::System.Nullable<int> Original_nTerPodrazdel, 
+                    global::System.Nullable<int> IsNull_vProcent, 
+                    global::System.Nullable<decimal> Original_vProcent) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[3];
+            if ((nCanonId.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(nCanonId.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((dtReportDate.HasValue == true)) {
+                command.Parameters[1].Value = ((System.DateTime)(dtReportDate.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((nTerOtdelenie.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(nTerOtdelenie.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((nTerPodrazdel.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(nTerPodrazdel.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((vProcent.HasValue == true)) {
+                command.Parameters[4].Value = ((decimal)(vProcent.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[5].Value = ((long)(Original_PropId));
+            if ((IsNull_nCanonId.HasValue == true)) {
+                command.Parameters[6].Value = ((int)(IsNull_nCanonId.Value));
+            }
+            else {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_nCanonId.HasValue == true)) {
+                command.Parameters[7].Value = ((int)(Original_nCanonId.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_dtReportDate.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(IsNull_dtReportDate.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_dtReportDate.HasValue == true)) {
+                command.Parameters[9].Value = ((System.DateTime)(Original_dtReportDate.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_nTerOtdelenie.HasValue == true)) {
+                command.Parameters[10].Value = ((int)(IsNull_nTerOtdelenie.Value));
+            }
+            else {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_nTerOtdelenie.HasValue == true)) {
+                command.Parameters[11].Value = ((int)(Original_nTerOtdelenie.Value));
+            }
+            else {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_nTerPodrazdel.HasValue == true)) {
+                command.Parameters[12].Value = ((int)(IsNull_nTerPodrazdel.Value));
+            }
+            else {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_nTerPodrazdel.HasValue == true)) {
+                command.Parameters[13].Value = ((int)(Original_nTerPodrazdel.Value));
+            }
+            else {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_vProcent.HasValue == true)) {
+                command.Parameters[14].Value = ((int)(IsNull_vProcent.Value));
+            }
+            else {
+                command.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_vProcent.HasValue == true)) {
+                command.Parameters[15].Value = ((decimal)(Original_vProcent.Value));
+            }
+            else {
+                command.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
