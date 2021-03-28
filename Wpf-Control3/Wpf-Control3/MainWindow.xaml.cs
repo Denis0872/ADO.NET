@@ -7,12 +7,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using Wpf_Control3.DataSet1TableAdapters;
@@ -44,6 +38,7 @@ namespace Wpf_Control3
         DataSet1 TableDataset1 = new DataSet1();
         DataSet1TableAdapters.OurTableTableAdapter PraktikaTableAdapter1 = new DataSet1TableAdapters.OurTableTableAdapter();
 
+        //проверка подключения
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -68,6 +63,7 @@ namespace Wpf_Control3
             else
                 MessageBox.Show("Соединение с базой данных уже закрыто");
         }
+        //подсчитать текущее количество строк
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             using (var tt = GetConnection())
@@ -78,6 +74,7 @@ namespace Wpf_Control3
                 label1.Content = number.ToString();
             }
         }
+        //вывести колонку в листбокс
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             using (var tt = GetConnection())
@@ -91,6 +88,7 @@ namespace Wpf_Control3
                 }
             }
         }
+        //заполнить базой
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             PraktikaTableAdapter1.Fill(TableDataset1.OurTable);
@@ -107,11 +105,13 @@ namespace Wpf_Control3
             //}
             #endregion
         }
+        //добавить строку
         private void addstring_Click(object sender, RoutedEventArgs e)
         {
             DataRow NRow = TableDataset1.OurTable.NewRow();
             TableDataset1.OurTable.Rows.Add(NRow);
         }
+        //удалить строку
         private void deletestring_Click(object sender, RoutedEventArgs e)
         {
             IEditableCollectionView iecv = CollectionViewSource.GetDefaultView(DataGrid1.ItemsSource) as IEditableCollectionView;
@@ -157,15 +157,18 @@ namespace Wpf_Control3
 
         }
         #endregion
+        //закрыть представление
         private void SwitchOff_Click(object sender, RoutedEventArgs e)
         {
             connection.Close();
             Application.Current.Shutdown();
         }
+        //сохранить
         private void save_Click(object sender, RoutedEventArgs e)
         {
             _ = PraktikaTableAdapter1.Update(TableDataset1.OurTable);
         }
+        //посмотреть какая строка выбрана и выбрана ли вообще
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
            if (DataGrid1.SelectedIndex >= 0) 
